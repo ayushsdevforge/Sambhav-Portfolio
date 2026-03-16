@@ -1,0 +1,26 @@
+{
+  "name": "Sambhav Mehra - Cybersecurity Enthusiast Portfolio",
+  "short_name": "Sambhav Mehra",
+  "description": "Cybersecurity enthusiast and full-stack developer specializing in ethical hacking, vulnerability assessment, and secure web applications",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFEF0",
+  "theme_color": "#FFFEF0",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["portfolio", "technology", "developer"],
+  "lang": "en-US"
+}
