@@ -1,20 +1,25 @@
 export default function sitemap() {
+  const baseUrl = "https://sambhavmehra.me";
   return [
     {
-      url: "https://sambhavmehra.me",
+      url: `${baseUrl}`,
       lastModified: new Date(),
     },
     {
-      url: "https://sambhavmehra.me/projects",
+      url: `${baseUrl}/about`,
       lastModified: new Date(),
     },
     {
-      url: "https://sambhavmehra.me/contact",
+      url: `${baseUrl}/projects`,
       lastModified: new Date(),
     },
     {
-      url: "https://sambhavmehra.me/about",
+      url: `${baseUrl}/experience`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/contact`,
       lastModified: new Date(),
     }
   ];
-}   
+}

@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  metadataBase: new URL('https://sambhav.me'),
+  metadataBase: new URL('https://sambhavmehra.me'),
   title: {
     default: 'Sambhav Mehra | Cybersecurity Enthusiast',
     template: '%s | Sambhav Mehra Portfolio'
@@ -40,7 +40,7 @@ export const metadata = {
     'OWASP',
     'CEH'
   ],
-  authors: [{ name: 'Sambhav Mehra', url: 'https://sambhav.me' }],
+  authors: [{ name: 'Sambhav Mehra', url: 'https://sambhavmehra.me' }],
   creator: 'Sambhav Mehra',
   publisher: 'Sambhav Mehra',
   formatDetection: {
@@ -51,7 +51,7 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://sambhav.me',
+    url: 'https://sambhavmehra.me',
     title: 'Sambhav Mehra - Cybersecurity Enthusiast | Ethical Hacker',
     description: 'Cybersecurity enthusiast and full-stack developer specializing in ethical hacking, vulnerability assessment, and secure web applications.',
     siteName: 'Sambhav Mehra Portfolio',
@@ -86,7 +86,7 @@ export const metadata = {
     google: 'your-google-verification-code',
   },
   alternates: {
-    canonical: 'https://sambhav.me',
+    canonical: 'https://sambhavmehra.me',
   },
   category: 'technology',
 };
@@ -104,12 +104,12 @@ export default function RootLayout({ children }) {
     "@type": "WebSite",
     "name": "Sambhav Mehra | Cybersecurity Enthusiast",
     "alternateName": "Sambhav Mehra | Ethical Hacker",
-    "url": "https://sambhav.me",
+    "url": "https://sambhavmehra.me",
     "description": "Cybersecurity enthusiast and full-stack developer specializing in ethical hacking, vulnerability assessment, and secure web applications.",
     "author": {
       "@type": "Person",
       "name": "Sambhav Mehra | Cybersecurity Enthusiast",
-      "url": "https://sambhav.me"
+      "url": "https://sambhavmehra.me"
     }
   };
 
