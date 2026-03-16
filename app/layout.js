@@ -52,7 +52,7 @@ export const metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://sambhav.me',
-    title: 'Sambhav Mehra - Cybersecurity Enthusiast | Full Stack Developer',
+    title: 'Sambhav Mehra - Cybersecurity Enthusiast | Ethical Hacker',
     description: 'Cybersecurity enthusiast and full-stack developer specializing in ethical hacking, vulnerability assessment, and secure web applications.',
     siteName: 'Sambhav Mehra Portfolio',
     images: [
@@ -60,13 +60,13 @@ export const metadata = {
         url: '/logo.png',
         width: 1200,
         height: 630,
-        alt: 'Sambhav Mehra - Cybersecurity Enthusiast | Full Stack Developer',
+        alt: 'Sambhav Mehra - Cybersecurity Enthusiast | Ethical Hacker',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sambhav Mehra - Cybersecurity Enthusiast | Full Stack Developer',
+    title: 'Sambhav Mehra - Cybersecurity Enthusiast | Ethical Hacker',
     description: 'Cybersecurity enthusiast and full-stack developer specializing in ethical hacking, vulnerability assessment, and secure web applications.',
     creator: '@sambhavmehra',
     images: ['/logo.png'],
@@ -103,7 +103,7 @@ export default function RootLayout({ children }) {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Sambhav Mehra | Cybersecurity Enthusiast",
-    "alternateName": "Sambhav Mehra | Full Stack Developer",
+    "alternateName": "Sambhav Mehra | Ethical Hacker",
     "url": "https://sambhav.me",
     "description": "Cybersecurity enthusiast and full-stack developer specializing in ethical hacking, vulnerability assessment, and secure web applications.",
     "author": {

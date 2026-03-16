@@ -55,7 +55,7 @@ export default function Home() {
                   </p>
                   <p className="flex items-center gap-3">
                     <Code2 className="text-[var(--cyber-blue)]" size={24} />
-                    Full Stack Developer
+                   Ethical Hacker 
                   </p>
                 </div>
               </motion.div>
@@ -201,7 +201,7 @@ export default function Home() {
                   Ethical Hacking & Penetration Testing
                 </h3>
                 <p className="text-lg text-foreground/60 leading-relaxed mb-6">
-                  Certified Ethical Hacker (CEH) with expertise in vulnerability assessment, penetration testing,
+                  Ethical Hackerwith expertise in vulnerability assessment, penetration testing,
                   and security auditing. Proficient in using industry-standard tools to identify and mitigate security threats.
                 </p>
 
