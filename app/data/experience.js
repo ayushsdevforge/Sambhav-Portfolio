@@ -10,7 +10,7 @@ export const experiences = [
     type: 'Education',
     description: [
       'Pursuing Bachelor of Technology in Computer Science Engineering with specialization in Cyber Security',
-      'Current CGPA: 6.88',
+      'Current CGPA: 7.13',
       'Focused on ethical hacking, network security, cryptography, and secure application development',
       'Active participant in cybersecurity competitions and CTF events'
     ],
