@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { personalInfo } from "../data/personal";
 import { MapPin, Briefcase, Code2, Heart } from "lucide-react";
+import Image from "next/image";
 
 const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -30,19 +31,36 @@ export default function About() {
                     </p>
                 </motion.div>
 
-                {/* Bio Section */}
+                {/* Bio Section with Photo */}
                 <motion.div
                     initial="hidden"
                     animate="visible"
                     variants={fadeIn}
                     transition={{ delay: 0.2 }}
-                    className="space-y-6 mb-16"
+                    className="grid lg:grid-cols-3 gap-12 items-center mb-16"
                 >
-                    {personalInfo.bio.map((paragraph, index) => (
-                        <p key={index} className="text-lg md:text-xl text-foreground/70 leading-relaxed">
-                            {paragraph}
-                        </p>
-                    ))}
+                    {/* Cyber Photo Node */}
+                    <div className="lg:col-span-1 relative h-64 w-64 md:h-80 md:w-80 mx-auto rounded-full p-1 bg-gradient-to-br from-[var(--matrix-green)] via-[var(--cyber-blue)] to-[var(--terminal-amber)] shadow-[0_0_30px_rgba(0,255,0,0.15)] group animate-gradient bg-[length:200%_auto]">
+                        <div className="w-full h-full p-2 bg-background rounded-full">
+                            <div className="relative w-full h-full rounded-full overflow-hidden border border-white/5">
+                                <Image
+                                    src="/about-photo.png"
+                                    alt="Sambhav Mehra Cyber Avatar"
+                                    fill
+                                    className="object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out group-hover:scale-110"
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Bio Text Node */}
+                    <div className="lg:col-span-2 space-y-6 text-center lg:text-left">
+                        {personalInfo.bio.map((paragraph, index) => (
+                            <p key={index} className="text-lg md:text-xl text-foreground/70 leading-relaxed">
+                                {paragraph}
+                            </p>
+                        ))}
+                    </div>
                 </motion.div>
 
                 {/* Info Cards */}

@@ -138,12 +138,13 @@ knowsAbout: [
 ],
 };
 
-return ( <html lang="en" suppressHydrationWarning> <head>
-{/* Manifest */} <link rel="manifest" href="/manifest.json" />
-
-```
-    {/* Font Optimization */}
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Manifest */}
+        <link rel="manifest" href="/manifest.json" />
+        {/* Font Optimization */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       rel="preconnect"
       href="https://fonts.gstatic.com"

@@ -8,8 +8,8 @@ import { projects } from "./data/projects";
 import Image from "next/image";
 
 const fadeIn = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  hidden: { opacity: 0, y: 30, filter: "blur(4px)" },
+  visible: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.8, ease: "easeOut" } }
 };
 
 const stagger = {
@@ -106,15 +106,30 @@ export default function Home() {
             {/* Right Column - Code Visualization (40%) */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              animate={{ 
+                opacity: 1, 
+                scale: 1, 
+                y: [0, -15, 0], 
+                rotate: [0, 1, -1, 0] 
+              }}
+              transition={{ 
+                duration: 6, 
+                repeat: Infinity, 
+                ease: "easeInOut",
+                opacity: { duration: 0.8, delay: 0.2 },
+                scale: { duration: 0.8, delay: 0.2 }
+              }}
               className="relative hidden lg:block lg:col-span-2"
             >
-              <div className="relative w-full aspect-square">
+              <div className="relative w-full aspect-square group">
                 {/* Decorative Elements */}
-                <div className="absolute inset-0 bg-gradient-to-br from-[var(--matrix-green)]/20 to-[var(--cyber-blue)]/20 rounded-3xl blur-3xl"></div>
+                <motion.div 
+                  className="absolute inset-0 bg-gradient-to-br from-[var(--matrix-green)]/20 to-[var(--cyber-blue)]/20 rounded-3xl blur-3xl"
+                  animate={{ scale: [1, 1.1, 1], rotate: [0, 90, 0] }}
+                  transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+                ></motion.div>
 
-                <div className="relative bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
+                <div className="relative bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/10 shadow-[0_0_40px_rgba(0,255,128,0.1)] group-hover:shadow-[0_0_60px_rgba(0,255,128,0.2)] transition-shadow duration-500">
                   <div className="space-y-4">
                     {/* Code Block Simulation */}
                     <div className="font-mono text-sm space-y-2">
@@ -135,12 +150,12 @@ export default function Home() {
 
                     {/* Stats */}
                     <div className="grid grid-cols-2 gap-4 pt-6 border-t border-white/10">
-                      <div className="text-center p-4 rounded-xl bg-white/5">
-                        <div className="text-3xl font-bold text-[var(--matrix-green)]">3+</div>
+                      <div className="text-center p-4 rounded-xl bg-white/5 shadow-inner">
+                        <div className="text-3xl font-bold text-[var(--matrix-green)] drop-shadow-md">3+</div>
                         <div className="text-sm text-foreground/60">Years Study</div>
                       </div>
-                      <div className="text-center p-4 rounded-xl bg-white/5">
-                        <div className="text-3xl font-bold text-[var(--cyber-blue)]">5+</div>
+                      <div className="text-center p-4 rounded-xl bg-white/5 shadow-inner">
+                        <div className="text-3xl font-bold text-[var(--cyber-blue)] drop-shadow-md">5+</div>
                         <div className="text-sm text-foreground/60">Projects</div>
                       </div>
                     </div>
@@ -158,7 +173,7 @@ export default function Home() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.3 }}
             variants={fadeIn}
             className="mb-16"
           >
@@ -184,7 +199,7 @@ export default function Home() {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.2 }}
               variants={fadeIn}
               className="md:col-span-4 md:row-span-2 group relative p-8 rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 to-transparent hover:border-[var(--matrix-green)]/50 transition-all overflow-hidden"
             >
@@ -219,7 +234,7 @@ export default function Home() {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.2 }}
               variants={fadeIn}
               transition={{ delay: 0.1 }}
               className="md:col-span-2 group relative p-8 rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 to-transparent hover:border-[var(--cyber-blue)]/50 transition-all overflow-hidden"
@@ -246,7 +261,7 @@ export default function Home() {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.2 }}
               variants={fadeIn}
               transition={{ delay: 0.2 }}
               className="md:col-span-2 group relative p-8 rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 to-transparent hover:border-[var(--terminal-amber)]/50 transition-all overflow-hidden"
@@ -273,7 +288,7 @@ export default function Home() {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.2 }}
               variants={fadeIn}
               transition={{ delay: 0.3 }}
               className="md:col-span-3 group relative p-6 rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 to-transparent hover:border-[var(--matrix-green)]/50 transition-all"
@@ -295,7 +310,7 @@ export default function Home() {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.2 }}
               variants={fadeIn}
               transition={{ delay: 0.4 }}
               className="md:col-span-3 group relative p-6 rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 to-transparent hover:border-[var(--cyber-blue)]/50 transition-all"
@@ -322,7 +337,7 @@ export default function Home() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.3 }}
             variants={fadeIn}
             className="flex justify-between items-end mb-16"
           >
@@ -345,7 +360,7 @@ export default function Home() {
               <motion.div
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true }}
+                viewport={{ once: true, amount: 0.2 }}
                 variants={fadeIn}
                 transition={{ delay: index * 0.1 }}
                 className="group h-full relative rounded-2xl border border-white/10 bg-white/5 overflow-hidden hover:border-[var(--matrix-green)]/50 transition-all cursor-pointer block"
