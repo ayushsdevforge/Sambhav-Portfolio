@@ -113,10 +113,12 @@ body {
   text-rendering: optimizeLegibility;
   @apply bg-background text-foreground;
   position: relative;
+  overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* ============================================ */
@@ -246,6 +248,110 @@ html {
   }
 }
 
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Pulse ring animation */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Cyber scan */
+@keyframes cyber-scan {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+/* Rotate border */
+@keyframes rotate-border {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Shimmer effect */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Count up animation */
+@keyframes countPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+/* Radar sweep */
+@keyframes radar-sweep {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Text reveal */
+@keyframes text-reveal {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+/* Breathing glow */
+@keyframes breathe {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+/* Grid line animation */
+@keyframes grid-move {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(40px);
+  }
+}
+
 /* ============================================ */
 /* UTILITY CLASSES */
 /* ============================================ */
@@ -363,6 +469,45 @@ html {
 /* Cyber Glow Effect */
 .cyber-glow {
   animation: cyber-glow 2s infinite;
+}
+
+/* Float animation */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Shimmer */
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 255, 65, 0.1) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+/* Cyber scan line */
+.cyber-scan-line {
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-scan-line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 65, 0.05), transparent);
+  animation: cyber-scan 4s ease-in-out infinite;
+}
+
+/* Breathing glow background */
+.breathe-glow {
+  animation: breathe 4s ease-in-out infinite;
 }
 
 /* ============================================ */
@@ -524,4 +669,63 @@ html {
 
 .animate-gradient {
   animation: gradient 3s ease infinite;
+}
+
+/* ============================================ */
+/* RESPONSIVE TYPOGRAPHY */
+/* ============================================ */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.5rem !important;
+    line-height: 1.1 !important;
+  }
+  .hero-subtitle {
+    font-size: 1rem !important;
+  }
+  .section-title {
+    font-size: 2rem !important;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .hero-title {
+    font-size: 3.5rem !important;
+  }
+  .section-title {
+    font-size: 2.5rem !important;
+  }
+}
+
+/* ============================================ */
+/* SKILL BAR ANIMATION */
+/* ============================================ */
+@keyframes skill-fill {
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--skill-level, 80%);
+  }
+}
+
+.skill-bar-fill {
+  animation: skill-fill 1.5s ease-out forwards;
+}
+
+/* ============================================ */
+/* GLASSMORPHISM CARDS */
+/* ============================================ */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(0, 255, 65, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 255, 65, 0.1);
+  transform: translateY(-4px);
 }

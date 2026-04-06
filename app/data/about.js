@@ -3,16 +3,16 @@ export const stats = [
   {
     id: 1,
     value: '3+',
-    label: 'Years Coding'
+    label: 'Years Study'
   },
   {
     id: 2,
-    value: '10+',
+    value: '7+',
     label: 'Projects Completed'
   },
   {
     id: 3,
-    value: '7.52',
+    value: '7.13',
     label: 'CGPA'
   },
   {
@@ -23,10 +23,10 @@ export const stats = [
 ];
 
 export const skills = {
-  frontend: ['React.js', 'Next.js', 'Tailwind CSS', 'HTML5', 'CSS3', 'JavaScript', 'Zustand', 'MUI', 'AntD'],
-  backend: ['Node.js', 'Express.js', 'MongoDB', 'PostgreSQL', 'RESTful APIs', 'Socket.io'],
-  languages: ['Python', 'C++', 'C', 'JavaScript', 'HTML', 'Tailwind', 'React.js', 'Firebase', 'Gemini AI'],
-  tools: ['Git', 'GitHub', 'Docker', 'Agile', 'VS Code', 'Postman']
+  security: ['Ethical Hacking', 'Penetration Testing', 'Vulnerability Assessment', 'SIEM Monitoring', 'OWASP Top 10', 'IDS/IPS'],
+  tools: ['Nmap', 'Metasploit', 'BurpSuite', 'Wireshark', 'Kali Linux', 'Sentinel'],
+  languages: ['Python', 'C++', 'C', 'JavaScript', 'SQL', 'KQL', 'HTML', 'CSS'],
+  networking: ['TCP/IP', 'DHCP', 'DNS', 'Firewalls', 'CCNA', 'Network Forensics']
 };
 
 export const timeline = [
@@ -35,10 +35,10 @@ export const timeline = [
     type: 'work',
     icon: 'Briefcase',
     iconColor: 'blue',
-    title: 'Full Stack Web Developer Intern',
+    title: 'Ethical Hacking Intern',
     organization: 'Mantrix Technologies',
     period: 'Oct 2025 - Present',
-    description: 'Working on MERN stack development for ArcNest and GraspUp. Built responsive UIs with React/Tailwind, developed REST APIs using Node.js/Express, and handled MongoDB data with integrated authentication.'
+    description: 'Working on cybersecurity assessments, vulnerability scanning, and penetration testing. Performing security audits and implementing security best practices for client applications.'
   },
   {
     id: 2,
@@ -48,7 +48,7 @@ export const timeline = [
     title: 'B.Tech in Computer Science and Engineering',
     organization: 'RGPV University, Bhopal',
     period: '2022 - Present',
-    description: 'CGPA: 7.52/10. Focused on software engineering, data structures, algorithms, and modern web technologies.'
+    description: 'CGPA: 7.13/10. Specialization in Cyber Security. Focused on ethical hacking, network security, and modern security frameworks.'
   },
   {
     id: 3,
@@ -56,9 +56,9 @@ export const timeline = [
     icon: 'GraduationCap',
     iconColor: 'green',
     title: 'Higher Secondary (Class XII)',
-    organization: 'K.L.S College, Nawada',
+    organization: 'Model Higher Secondary School, Ujjain',
     period: '2022',
-    description: 'Percentage: 84.4%'
+    description: 'Percentage: 80%'
   },
   {
     id: 4,
@@ -66,8 +66,8 @@ export const timeline = [
     icon: 'GraduationCap',
     iconColor: 'orange',
     title: 'Senior Secondary (Class X)',
-    organization: 'High School, Akbarpur',
+    organization: 'Model Higher Secondary School, Ujjain',
     period: '2020',
-    description: 'Percentage: 83%'
+    description: 'Percentage: 79.6%'
   }
 ];

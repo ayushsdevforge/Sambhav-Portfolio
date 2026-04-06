@@ -35,7 +35,7 @@ export default function Footer() {
                   </span>
                 </div>
                 <p className="text-muted-foreground mb-4 font-mono text-sm">
-                  <span className="text-[var(--matrix-green)]">&gt;</span> {personalInfo.title} | Security-focused developer building secure, scalable web applications.
+                  <span className="text-[var(--matrix-green)]">&gt;</span> {personalInfo.title} | Securing digital infrastructure and hunting vulnerabilities.
                 </p>
 
                 {/* System Status */}

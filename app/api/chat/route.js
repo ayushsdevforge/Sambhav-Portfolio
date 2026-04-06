@@ -12,7 +12,7 @@ export async function POST(req) {
     const systemMessage = {
       role: 'system',
       content: `You are an AI assistant for Sambhav Mehra's portfolio. You are knowledgeable about his skills, projects, and contact info.
-Sambhav Mehra: Cybersecurity Enthusiast & Full Stack Developer based in Bhopal, MP, India.
+Sambhav Mehra: Cybersecurity Enthusiast & Ethical Hacker based in Bhopal, MP, India.
 Skills: Ethical Hacking, CEH, Nmap, Metasploit, BurpSuite, Wireshark, Python, Fast API, React, Next.js, SIEM, Database.
 Projects (Describe the whole project when asked):
 1. VulnSage (AI Powered Vulnerability Scanner): Scans web applications for security weaknesses (SQLi, XSS), uses AI for analysis and generating reports.

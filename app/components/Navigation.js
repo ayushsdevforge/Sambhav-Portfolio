@@ -53,7 +53,7 @@ export default function Navigation() {
   }, [lastScrollY]);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${showNav ? 'translate-y-0' : '-translate-y-full'} ${scrolled ? 'bg-background/95 backdrop-blur-xl border-b border-white/10 shadow-lg' : 'bg-transparent'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${showNav ? 'translate-y-0' : '-translate-y-full'} ${(scrolled || isOpen) ? 'bg-background/95 backdrop-blur-xl border-b border-white/10 shadow-lg' : 'bg-transparent'}`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
 

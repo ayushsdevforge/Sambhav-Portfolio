@@ -66,20 +66,6 @@ export const achievements = [
     organization: 'Sagar Institute of Science & Technology',
     year: '2023-2024',
     description: 'Coordinated multiple techno-cultural events at college level, showcasing leadership and organizational skills.'
-  },
-  {
-    id: 4,
-    title: 'Higher Secondary Education',
-    organization: 'Model Higher Secondary School, Ujjain',
-    year: '2022',
-    description: 'Completed Higher Secondary Education with 79.4% marks, building a strong foundation in science and mathematics.'
-  },
-  {
-    id: 5,
-    title: 'Senior Secondary Education',
-    organization: 'Model Higher Secondary School, Ujjain',
-    year: '2020',
-    description: 'Completed Senior Secondary Education with 79.6% marks, demonstrating consistent academic performance.'
   }
 ];
 
