@@ -140,7 +140,7 @@ knowsAbout: [
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
+      <head suppressHydrationWarning>
         {/* Manifest */}
         <link rel="manifest" href="/manifest.json" />
         {/* Font Optimization */}
@@ -159,6 +159,7 @@ knowsAbout: [
   </head>
 
   <body
+    suppressHydrationWarning
     className={`${geistMono.variable} antialiased bg-background text-foreground`}
   >
     <Navigation />
